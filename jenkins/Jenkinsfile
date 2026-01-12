@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven'     // Jenkins tool name
+        maven 'maven'     // Jenkins tool name
         jdk 'jdk17'       // Jenkins tool name
     }
 
