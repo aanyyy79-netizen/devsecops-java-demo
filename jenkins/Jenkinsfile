@@ -43,8 +43,11 @@ pipeline {
         }
         
         stage('Dependency Check') {
-            dependencyCheck additionalArguments: '--scan .', odcInstallation: 'Default'
-            dependencyCheckPublisher pattern: '**/dependency-check-report.xml'
+            steps{
+                dependencyCheck additionalArguments: '--scan .', odcInstallation: 'Default'
+                dependencyCheckPublisher pattern: '**/dependency-check-report.xml'  
+            }
+            
         }
     }
 
